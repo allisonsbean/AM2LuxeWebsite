@@ -1,0 +1,72 @@
+/* ============================================================
+   AM2LUXE — LUXE COLOR FOUNDATION
+   Ivory / black / gold retone of the homepage color schemes.
+   Loaded via snippets/stylesheets.liquid. !important is used so
+   these win over the theme's color-schemes regardless of order.
+   ============================================================ */
+
+/* LIGHT (ivory): page, header, hero, footer, announcement, collection + product lists */
+:root,
+.color-scheme-1,
+.color-scheme-6,
+.color-scheme-58084d4c-a86e-4d0a-855e-a0966e5043f7 {
+  --color-background: #F5F1E8 !important;
+  --color-background-rgb: 245, 241, 232 !important;
+  --color-foreground: #161311 !important;
+  --color-foreground-rgb: 22, 19, 17 !important;
+  --color-foreground-heading: #161311 !important;
+  --color-foreground-heading-rgb: 22, 19, 17 !important;
+  --color-primary: #161311 !important;
+  --color-primary-rgb: 22, 19, 17 !important;
+  --color-primary-hover: #3A2F2A !important;
+  --color-border: rgba(168, 135, 74, 0.40) !important;
+  --color-primary-button-background: #161311 !important;
+  --color-primary-button-text: #F5F1E8 !important;
+  --color-primary-button-border: #161311 !important;
+  --color-primary-button-hover-background: rgba(0,0,0,0) !important;
+  --color-primary-button-hover-text: #161311 !important;
+  --color-primary-button-hover-border: #161311 !important;
+  --color-secondary-button-text: #161311 !important;
+  --color-secondary-button-border: #161311 !important;
+}
+
+/* secondary light scheme: slightly deeper ivory */
+.color-scheme-2 {
+  --color-background: #EDE6D9 !important;
+  --color-background-rgb: 237, 230, 217 !important;
+  --color-foreground: #161311 !important;
+  --color-foreground-rgb: 22, 19, 17 !important;
+  --color-foreground-heading: #161311 !important;
+  --color-foreground-heading-rgb: 22, 19, 17 !important;
+  --color-primary: #161311 !important;
+  --color-primary-rgb: 22, 19, 17 !important;
+  --color-primary-hover: #3A2F2A !important;
+  --color-border: rgba(168, 135, 74, 0.40) !important;
+  --color-primary-button-background: #161311 !important;
+  --color-primary-button-text: #F5F1E8 !important;
+  --color-primary-button-border: #161311 !important;
+  --color-secondary-button-text: #161311 !important;
+  --color-secondary-button-border: #161311 !important;
+}
+
+/* NOIR feature scheme: the deep black mid-page section */
+.color-scheme-5 {
+  --color-background: #161311 !important;
+  --color-background-rgb: 22, 19, 17 !important;
+  --color-foreground: #F5F1E8 !important;
+  --color-foreground-rgb: 245, 241, 232 !important;
+  --color-foreground-heading: #F5F1E8 !important;
+  --color-foreground-heading-rgb: 245, 241, 232 !important;
+  --color-primary: #F5F1E8 !important;
+  --color-primary-rgb: 245, 241, 232 !important;
+  --color-primary-hover: #C9A028 !important;
+  --color-border: rgba(196, 169, 104, 0.40) !important;
+  --color-primary-button-background: #C9A028 !important;
+  --color-primary-button-text: #161311 !important;
+  --color-primary-button-border: #C9A028 !important;
+  --color-primary-button-hover-background: #A8841A !important;
+  --color-primary-button-hover-text: #161311 !important;
+  --color-primary-button-hover-border: #A8841A !important;
+  --color-secondary-button-text: #F5F1E8 !important;
+  --color-secondary-button-border: #F5F1E8 !important;
+}
