@@ -1,0 +1,411 @@
+/* ============================================================
+   AM2LUXE — Premium Visual System v2
+   Inspired by Avantgarde Artist Agency
+   Custom cursor · Kinetic text · Parallax · Tilt · Magnetic
+   ============================================================ */
+
+:root {
+  --gold: #C9A028;
+  --gold-light: #E2C05A;
+  --gold-dark: #A8841A;
+  --gold-gradient: linear-gradient(135deg, #A8841A 0%, #E2C05A 45%, #C9A028 55%, #A8841A 100%);
+  --gold-gradient-simple: linear-gradient(135deg, #C9A028, #E2C05A, #C9A028);
+  --luxury-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --luxury-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --luxury-duration: 0.7s;
+  --luxury-shadow-hover: 0 20px 60px rgba(0,0,0,0.15), 0 6px 20px rgba(0,0,0,0.08);
+  --gold-glow: 0 0 24px rgba(201,160,40,0.25), 0 4px 16px rgba(201,160,40,0.12);
+}
+
+/* ── Base ──────────────────────────────────────────────────── */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@media (any-pointer: fine) {
+  body { cursor: none; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CUSTOM CURSOR — gold dot + trailing ring
+─────────────────────────────────────────────────────────────── */
+.am2-cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 8px; height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  box-shadow: 0 0 10px rgba(201,160,40,0.9);
+  transition: width 0.2s var(--luxury-ease),
+              height 0.2s var(--luxury-ease),
+              background 0.2s;
+}
+
+.am2-cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 36px; height: 36px;
+  border: 1.5px solid rgba(201,160,40,0.55);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  transition: width 0.3s var(--luxury-ease),
+              height 0.3s var(--luxury-ease),
+              border-color 0.3s,
+              background 0.3s;
+}
+
+.am2-cursor-dot--hover {
+  width: 12px; height: 12px;
+  background: var(--gold-light);
+  box-shadow: 0 0 20px rgba(201,160,40,1);
+}
+
+.am2-cursor-ring--hover {
+  width: 52px; height: 52px;
+  border-color: rgba(201,160,40,0.7);
+  background: rgba(201,160,40,0.05);
+}
+
+.am2-cursor-ring--click {
+  width: 28px; height: 28px;
+  border-color: var(--gold);
+  background: rgba(201,160,40,0.1);
+}
+
+@media (any-pointer: coarse), (max-width: 768px) {
+  .am2-cursor-dot,
+  .am2-cursor-ring { display: none !important; }
+  body { cursor: auto !important; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   KINETIC TEXT REVEAL — words slide up from clip
+─────────────────────────────────────────────────────────────── */
+.am2-word-wrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  line-height: inherit;
+  margin-right: 0.22em;
+}
+
+.am2-word {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform var(--luxury-duration) var(--luxury-ease-out),
+              opacity 0.5s ease;
+  transition-delay: calc(var(--word-i, 0) * 0.07s);
+}
+
+.am2-split-visible .am2-word {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .am2-word { transform: none !important; opacity: 1 !important; transition: none !important; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SCROLL REVEAL — fade + slide up
+─────────────────────────────────────────────────────────────── */
+[data-am-reveal="pending"] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.75s var(--luxury-ease),
+              transform 0.75s var(--luxury-ease-out);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+[data-am-reveal="visible"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-am-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   BUTTONS — Gold gradient, magnetic-ready
+─────────────────────────────────────────────────────────────── */
+.button--primary,
+[type="submit"]:not(.search-modal__submit):not(.email-signup__submit),
+.product-form__submit,
+.cart__checkout-button {
+  background: var(--gold-gradient) !important;
+  background-size: 200% 200% !important;
+  background-position: right center !important;
+  border: none !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  font-size: 0.75em !important;
+  border-radius: 3px !important;
+  box-shadow: var(--gold-glow) !important;
+  transform-origin: center center;
+  transition: background-position 0.6s var(--luxury-ease),
+              box-shadow 0.4s var(--luxury-ease),
+              transform 0.35s var(--luxury-ease-out) !important;
+  will-change: transform, background-position;
+}
+
+.button--primary:hover,
+[type="submit"]:not(.search-modal__submit):not(.email-signup__submit):hover,
+.product-form__submit:hover,
+.cart__checkout-button:hover {
+  background-position: left center !important;
+  box-shadow: 0 0 40px rgba(201,160,40,0.45), 0 8px 30px rgba(201,160,40,0.2) !important;
+}
+
+.button--secondary {
+  border: 1.5px solid currentColor !important;
+  letter-spacing: 0.09em !important;
+  text-transform: uppercase !important;
+  font-size: 0.75em !important;
+  font-weight: 600 !important;
+  border-radius: 3px !important;
+  transform-origin: center center;
+  transition: all 0.4s var(--luxury-ease) !important;
+}
+
+.button--secondary:hover {
+  border-color: var(--gold) !important;
+  color: var(--gold) !important;
+  box-shadow: 0 4px 16px rgba(201,160,40,0.15) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PRODUCT + COLLECTION CARDS
+─────────────────────────────────────────────────────────────── */
+.product-card,
+.collection-card,
+.featured-blog-posts-card {
+  transition: transform 0.45s var(--luxury-ease),
+              box-shadow 0.45s var(--luxury-ease) !important;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.product-card:hover,
+.collection-card:hover,
+.featured-blog-posts-card:hover {
+  box-shadow: var(--luxury-shadow-hover) !important;
+}
+
+/* Image zoom */
+.product-card .card-gallery,
+.product-card__image,
+.collection-card__image {
+  overflow: hidden;
+}
+
+.product-card .card-gallery img,
+.product-card__image img,
+.collection-card__image img {
+  transition: transform 0.7s var(--luxury-ease) !important;
+}
+
+.product-card:hover .card-gallery img,
+.product-card:hover .product-card__image img,
+.collection-card:hover .collection-card__image img {
+  transform: scale(1.06) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GOLD MARQUEE STRIP DIVIDER
+─────────────────────────────────────────────────────────────── */
+.am2-marquee-divider {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  padding: 13px 0;
+  border-top: 1px solid rgba(201,160,40,0.2);
+  border-bottom: 1px solid rgba(201,160,40,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.am2-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: am2Scroll 26s linear infinite;
+}
+
+.am2-marquee-track span {
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0 2.5em;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes am2Scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .am2-marquee-track { animation: none; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   HEADER — Glass effect on scroll
+─────────────────────────────────────────────────────────────── */
+.header {
+  transition: background-color 0.4s var(--luxury-ease),
+              box-shadow 0.4s var(--luxury-ease) !important;
+}
+
+.am2-header-scrolled {
+  background: rgba(255,255,255,0.93) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.06) !important;
+}
+
+/* Nav link underlines */
+.header-menu__item a,
+.header__menu-item a {
+  position: relative;
+  letter-spacing: 0.08em;
+  font-size: 0.78em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
+}
+
+.header-menu__item a::after,
+.header__menu-item a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: var(--gold-gradient-simple);
+  transition: width 0.4s var(--luxury-ease-out);
+}
+
+.header-menu__item:hover a::after,
+.header__menu-item:hover a::after,
+.header-menu__item--active a::after {
+  width: 100%;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MISC — Price, Inputs, Variants, Badge, Footer
+─────────────────────────────────────────────────────────────── */
+.price--sale .price-item--sale {
+  color: var(--gold) !important;
+  font-weight: 700 !important;
+}
+
+.price-item--regular {
+  color: rgba(0,0,0,0.42) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 3px rgba(201,160,40,0.12) !important;
+}
+
+.variant-button--selected,
+.swatch--selected {
+  border-color: var(--gold) !important;
+  box-shadow: 0 0 0 2px var(--gold) !important;
+}
+
+.badge {
+  letter-spacing: 0.1em !important;
+  font-size: 0.6em !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  border-radius: 2px !important;
+}
+
+.section__title::after,
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 1.5px;
+  background: var(--gold-gradient-simple);
+  margin: 0.9rem auto 0;
+}
+
+.footer {
+  border-top: 1px solid rgba(0,0,0,0.07) !important;
+}
+
+.footer__heading {
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  font-size: 0.72em !important;
+  font-weight: 700 !important;
+}
+
+.announcement-bar {
+  letter-spacing: 0.14em !important;
+  font-size: 0.7em !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+}
+
+.cart-drawer {
+  box-shadow: -12px 0 60px rgba(0,0,0,0.12) !important;
+}
+
+.cart-drawer__header {
+  border-bottom: 1px solid rgba(0,0,0,0.07) !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  font-size: 0.82em !important;
+  font-weight: 700 !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SCROLLBAR — Slim gold
+─────────────────────────────────────────────────────────────── */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) transparent;
+}
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--gold-gradient-simple);
+  border-radius: 2px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PAGE ENTRANCE ANIMATION
+─────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes am2PageIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  main, #MainContent {
+    animation: am2PageIn 0.55s var(--luxury-ease-out) both;
+  }
+}
