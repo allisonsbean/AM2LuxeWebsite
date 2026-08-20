@@ -1,0 +1,44 @@
+/* ============================================================
+   AM2LUXE — TYPOGRAPHY + BUTTONS
+   Exact mockup fonts (Bodoni Moda headings / Jost body),
+   elegant mixed-case headings, refined buttons.
+   Loaded via stylesheets.liquid. !important wins over the
+   theme's font variables regardless of load order.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500;600&display=swap');
+
+/* --- Fonts: point the theme's font variables at the mockup fonts --- */
+:root {
+  --font-h1--family: 'Bodoni Moda', serif !important;
+  --font-h2--family: 'Bodoni Moda', serif !important;
+  --font-h3--family: 'Bodoni Moda', serif !important;
+  --font-h4--family: 'Bodoni Moda', serif !important;
+  --font-h5--family: 'Jost', sans-serif !important;
+  --font-h6--family: 'Jost', sans-serif !important;
+  --font-paragraph--family: 'Jost', sans-serif !important;
+  --font-family: 'Jost', sans-serif !important;
+  --button-font-family-primary: 'Jost', sans-serif !important;
+  --button-font-family-secondary: 'Jost', sans-serif !important;
+}
+
+/* --- Headings: elegant mixed-case, gentle tracking --- */
+h1, .h1 {
+  text-transform: none !important;
+  letter-spacing: 0.005em !important;
+  font-weight: 500 !important;
+}
+h2, .h2, h3, .h3 {
+  text-transform: none !important;
+  letter-spacing: 0.005em !important;
+}
+
+/* --- Buttons: refined, classic, letter-spaced --- */
+.button,
+button.button,
+a.button {
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.18em !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+}
