@@ -1,12 +1,13 @@
 <div class="am2h">
   <div class="am2h__wrap">
     <div class="am2h__copy">
+      <span class="am2h__rule"></span>
       <span class="am2h__eyebrow">Reusable press-on manicures</span>
       <h1 class="am2h__title">The salon,<br><em>refined</em> at home.</h1>
       <p class="am2h__lede">Luxury soft-gel nails applied in minutes and worn again and again. Two ways to wear, sixteen sizes for a flawless fit, and a fraction of the salon price.</p>
       <div class="am2h__cta">
         <a href="/collections/all" class="am2h__btn am2h__btn--fill">Shop the collection</a>
-        <a href="/pages/how-to-wear" class="am2h__btn am2h__btn--line">How it works</a>
+        <a href="/pages/how-to-wear" class="am2h__btn am2h__btn--line"><span>How it works</span></a>
       </div>
       <div class="am2h__meta">
         <span>Wear up to two weeks</span>
@@ -15,35 +16,46 @@
       </div>
     </div>
     <div class="am2h__media">
-      <img src="https://am2luxe.com/cdn/shop/files/Pink_Diamond_Dust_3.jpg?v=1754693163&width=1400" alt="AM2Luxe reusable press-on nails" loading="eager">
+      <div class="am2h__frame">
+        <div class="am2h__imgwrap">
+          <img src="https://am2luxe.com/cdn/shop/files/Pink_Diamond_Dust_3.jpg?v=1754693163&width=1400" alt="AM2Luxe reusable press-on nails" loading="eager">
+        </div>
+      </div>
       <div class="am2h__tag"><div class="am2h__tag-in"><div class="am2h__n">$16</div><div class="am2h__l">vs. $45+ salon</div></div></div>
     </div>
   </div>
 </div>
 <style>
-  .am2h{background:#F5F1E8}
-  .am2h__wrap{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:600px}
-  .am2h__copy{display:flex;flex-direction:column;justify-content:center;padding:70px 60px 70px 34px}
-  .am2h__eyebrow{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#A8874A;margin-bottom:20px}
-  .am2h__title{font-family:'Bodoni Moda',serif;font-weight:500;font-size:66px;line-height:1.06;color:#161311;margin:0 0 22px}
-  .am2h__title em{font-style:italic;color:#A8874A}
-  .am2h__lede{font-family:'Jost',sans-serif;font-weight:300;font-size:16px;line-height:1.8;color:#5B5349;max-width:430px;margin:0}
+  .am2h{--foil:linear-gradient(135deg,#8A6D2F 0%,#D9BC75 18%,#F4E7B8 34%,#B8923F 50%,#F0DB96 66%,#9C7B3B 84%,#D4B76A 100%);background:radial-gradient(120% 90% at 15% 20%,#FBF7EF 0%,#F5F1E8 55%,#EFE9DC 100%);overflow:hidden}
+  .am2h__wrap{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;min-height:640px;gap:40px}
+  .am2h__copy{padding:70px 40px 70px 34px;animation:am2hUp .9s cubic-bezier(.16,1,.3,1) both}
+  @keyframes am2hUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  .am2h__rule{display:block;width:56px;height:2px;background:var(--foil);margin-bottom:24px}
+  .am2h__eyebrow{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.36em;text-transform:uppercase;background:var(--foil);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .am2h__title{font-family:'Bodoni Moda',serif;font-weight:500;font-size:80px;line-height:1.02;color:#161311;margin:18px 0 24px;letter-spacing:.005em}
+  .am2h__title em{font-style:italic;background:var(--foil);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .am2h__lede{font-family:'Jost',sans-serif;font-weight:300;font-size:16.5px;line-height:1.8;color:#5B5349;max-width:440px;margin:0}
   .am2h__cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
-  .am2h__btn{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;padding:16px 32px;border:1px solid #161311;transition:all .25s ease;text-decoration:none;display:inline-block}
+  .am2h__btn{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;padding:17px 34px;border:1px solid #161311;transition:all .25s ease;text-decoration:none;display:inline-block}
   .am2h__btn--fill{background:#161311;color:#F5F1E8}
-  .am2h__btn--fill:hover{background:transparent;color:#161311}
-  .am2h__btn--line{background:transparent;color:#161311;border-color:#A8874A}
-  .am2h__btn--line:hover{background:#161311;color:#F5F1E8;border-color:#161311}
-  .am2h__meta{display:flex;gap:30px;margin-top:38px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5B5349;flex-wrap:wrap}
-  .am2h__meta span{position:relative;padding-left:15px}
-  .am2h__meta span::before{content:"";position:absolute;left:0;top:5px;width:5px;height:5px;background:#A8874A;transform:rotate(45deg)}
-  .am2h__media{position:relative;overflow:hidden;background:#E9E2D4}
-  .am2h__media img{width:100%;height:100%;object-fit:cover;display:block}
-  .am2h__tag{position:absolute;left:34px;bottom:34px;background:linear-gradient(135deg,#8A6D2F,#F4E7B8,#A8874A);padding:2px}
-  .am2h__tag-in{background:#F5F1E8;padding:16px 26px;text-align:center}
-  .am2h__n{font-family:'Bodoni Moda',serif;font-size:34px;line-height:1;color:#161311}
+  .am2h__btn--fill:hover{background:transparent;color:#161311;box-shadow:0 10px 30px -12px rgba(22,19,17,.4)}
+  .am2h__btn--line{background:var(--foil);padding:1.5px;border:none}
+  .am2h__btn--line span{display:block;background:#F5F1E8;color:#161311;padding:15.5px 32px;transition:all .25s ease;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+  .am2h__btn--line:hover span{background:transparent;color:#161311}
+  .am2h__meta{display:flex;gap:30px;margin-top:40px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5B5349;flex-wrap:wrap}
+  .am2h__meta span{position:relative;padding-left:16px}
+  .am2h__meta span::before{content:"";position:absolute;left:0;top:4px;width:6px;height:6px;background:var(--foil);transform:rotate(45deg)}
+  .am2h__media{position:relative;padding:40px 34px 40px 0;animation:am2hFade 1.2s ease .15s both}
+  @keyframes am2hFade{from{opacity:0}to{opacity:1}}
+  .am2h__frame{background:var(--foil);padding:3px;box-shadow:0 30px 70px -30px rgba(22,19,17,.5)}
+  .am2h__imgwrap{position:relative;aspect-ratio:4/5;overflow:hidden;background:#E9E2D4}
+  .am2h__imgwrap img{width:100%;height:100%;object-fit:cover;display:block}
+  .am2h__imgwrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(22,19,17,.28) 100%)}
+  .am2h__tag{position:absolute;left:0;bottom:70px;background:var(--foil);padding:2px;box-shadow:0 16px 40px -18px rgba(22,19,17,.55)}
+  .am2h__tag-in{background:#F5F1E8;padding:16px 28px;text-align:center}
+  .am2h__n{font-family:'Bodoni Moda',serif;font-size:36px;line-height:1;color:#161311}
   .am2h__l{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#5B5349;margin-top:6px}
-  @media(max-width:900px){.am2h__wrap{grid-template-columns:1fr}.am2h__copy{padding:54px 24px 44px}.am2h__title{font-size:46px}.am2h__media{min-height:400px;order:-1}}
+  @media(max-width:900px){.am2h__wrap{grid-template-columns:1fr;gap:0}.am2h__copy{padding:52px 24px 40px}.am2h__title{font-size:50px}.am2h__media{padding:0 24px 40px;order:-1}.am2h__tag{left:24px;bottom:24px}}
 </style>
 {% schema %}
 { "name": "AM2 Hero", "tag": "section", "settings": [], "presets": [{ "name": "AM2 Hero" }] }
