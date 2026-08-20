@@ -1,0 +1,20 @@
+<div class="am2t">
+  <div class="am2t__row">
+    <div class="am2t__cell"><b>Reusable</b><small>Wear, remove, repeat</small></div>
+    <div class="am2t__cell"><b>Two ways to wear</b><small>Glue or sticky tabs</small></div>
+    <div class="am2t__cell"><b>A flawless fit</b><small>32 nails in 16 sizes</small></div>
+    <div class="am2t__cell"><b>Ten-minute mani</b><small>Salon quality at home</small></div>
+  </div>
+</div>
+<style>
+  .am2t{background:#FBF9F4;border-top:1px solid rgba(168,135,74,.35);border-bottom:1px solid rgba(168,135,74,.35)}
+  .am2t__row{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+  .am2t__cell{padding:30px 22px;text-align:center;border-right:1px solid rgba(22,19,17,.1)}
+  .am2t__cell:last-child{border-right:none}
+  .am2t__cell b{display:block;font-family:'Bodoni Moda',serif;font-weight:500;font-size:19px;color:#161311;margin-bottom:5px}
+  .am2t__cell small{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#5B5349}
+  @media(max-width:700px){.am2t__row{grid-template-columns:1fr 1fr}.am2t__cell{border-bottom:1px solid rgba(22,19,17,.1)}.am2t__cell:nth-child(2){border-right:none}}
+</style>
+{% schema %}
+{ "name": "AM2 Trust Row", "tag": "section", "settings": [], "presets": [{ "name": "AM2 Trust Row" }] }
+{% endschema %}

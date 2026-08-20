@@ -1,0 +1,50 @@
+<div class="am2h">
+  <div class="am2h__wrap">
+    <div class="am2h__copy">
+      <span class="am2h__eyebrow">Reusable press-on manicures</span>
+      <h1 class="am2h__title">The salon,<br><em>refined</em> at home.</h1>
+      <p class="am2h__lede">Luxury soft-gel nails applied in minutes and worn again and again. Two ways to wear, sixteen sizes for a flawless fit, and a fraction of the salon price.</p>
+      <div class="am2h__cta">
+        <a href="/collections/all" class="am2h__btn am2h__btn--fill">Shop the collection</a>
+        <a href="/pages/how-to-wear" class="am2h__btn am2h__btn--line">How it works</a>
+      </div>
+      <div class="am2h__meta">
+        <span>Wear up to two weeks</span>
+        <span>Reusable</span>
+        <span>32 nails, 16 sizes</span>
+      </div>
+    </div>
+    <div class="am2h__media">
+      <img src="https://am2luxe.com/cdn/shop/files/Pink_Diamond_Dust_3.jpg?v=1754693163&width=1400" alt="AM2Luxe reusable press-on nails" loading="eager">
+      <div class="am2h__tag"><div class="am2h__tag-in"><div class="am2h__n">$16</div><div class="am2h__l">vs. $45+ salon</div></div></div>
+    </div>
+  </div>
+</div>
+<style>
+  .am2h{background:#F5F1E8}
+  .am2h__wrap{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:600px}
+  .am2h__copy{display:flex;flex-direction:column;justify-content:center;padding:70px 60px 70px 34px}
+  .am2h__eyebrow{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:#A8874A;margin-bottom:20px}
+  .am2h__title{font-family:'Bodoni Moda',serif;font-weight:500;font-size:66px;line-height:1.06;color:#161311;margin:0 0 22px}
+  .am2h__title em{font-style:italic;color:#A8874A}
+  .am2h__lede{font-family:'Jost',sans-serif;font-weight:300;font-size:16px;line-height:1.8;color:#5B5349;max-width:430px;margin:0}
+  .am2h__cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+  .am2h__btn{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;padding:16px 32px;border:1px solid #161311;transition:all .25s ease;text-decoration:none;display:inline-block}
+  .am2h__btn--fill{background:#161311;color:#F5F1E8}
+  .am2h__btn--fill:hover{background:transparent;color:#161311}
+  .am2h__btn--line{background:transparent;color:#161311;border-color:#A8874A}
+  .am2h__btn--line:hover{background:#161311;color:#F5F1E8;border-color:#161311}
+  .am2h__meta{display:flex;gap:30px;margin-top:38px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5B5349;flex-wrap:wrap}
+  .am2h__meta span{position:relative;padding-left:15px}
+  .am2h__meta span::before{content:"";position:absolute;left:0;top:5px;width:5px;height:5px;background:#A8874A;transform:rotate(45deg)}
+  .am2h__media{position:relative;overflow:hidden;background:#E9E2D4}
+  .am2h__media img{width:100%;height:100%;object-fit:cover;display:block}
+  .am2h__tag{position:absolute;left:34px;bottom:34px;background:linear-gradient(135deg,#8A6D2F,#F4E7B8,#A8874A);padding:2px}
+  .am2h__tag-in{background:#F5F1E8;padding:16px 26px;text-align:center}
+  .am2h__n{font-family:'Bodoni Moda',serif;font-size:34px;line-height:1;color:#161311}
+  .am2h__l{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#5B5349;margin-top:6px}
+  @media(max-width:900px){.am2h__wrap{grid-template-columns:1fr}.am2h__copy{padding:54px 24px 44px}.am2h__title{font-size:46px}.am2h__media{min-height:400px;order:-1}}
+</style>
+{% schema %}
+{ "name": "AM2 Hero", "tag": "section", "settings": [], "presets": [{ "name": "AM2 Hero" }] }
+{% endschema %}
