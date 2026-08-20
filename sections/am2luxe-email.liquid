@@ -1,0 +1,36 @@
+<div class="am2e">
+  <div class="am2e__wrap">
+    <span class="am2e__rule"></span>
+    <span class="am2e__eyebrow">Join the list</span>
+    <h2 class="am2e__title">Enjoy <em>10% off</em> your first set</h2>
+    <p class="am2e__sub">Be first to see new arrivals, restocks, and private sales. No noise, just beautiful nails.</p>
+    {% form 'customer' %}
+      {% if form.posted_successfully? %}
+        <p class="am2e__ok">Thank you. Keep an eye on your inbox for your welcome offer.</p>
+      {% else %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="am2e__form">
+          <input type="email" name="contact[email]" placeholder="Your email address" aria-label="Email" required>
+          <button type="submit">Sign up</button>
+        </div>
+      {% endif %}
+    {% endform %}
+  </div>
+</div>
+<style>
+  .am2e{--foil:linear-gradient(135deg,#8A6D2F,#D9BC75,#F4E7B8,#B8923F,#F0DB96,#9C7B3B,#D4B76A);background:#161311;color:#F5F1E8}
+  .am2e__wrap{max-width:640px;margin:0 auto;padding:94px 34px;text-align:center}
+  .am2e__rule{display:block;width:52px;height:2px;background:var(--foil);margin:0 auto 20px}
+  .am2e__eyebrow{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.34em;text-transform:uppercase;background:var(--foil);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .am2e__title{font-family:'Bodoni Moda',serif;font-weight:500;font-size:44px;color:#F5F1E8;margin:14px 0 12px}
+  .am2e__title em{font-style:italic;background:var(--foil);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .am2e__sub{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;color:rgba(245,241,232,.7);margin:0 auto 30px;max-width:460px}
+  .am2e__form{display:flex;max-width:460px;margin:0 auto;background:var(--foil);padding:1.5px}
+  .am2e__form input{flex:1;background:#161311;border:none;color:#F5F1E8;padding:17px 20px;font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.04em;outline:none}
+  .am2e__form input::placeholder{color:rgba(245,241,232,.45)}
+  .am2e__form button{background:var(--foil);color:#161311;border:none;padding:0 28px;cursor:pointer;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+  .am2e__ok{font-family:'Bodoni Moda',serif;font-style:italic;font-size:20px;color:#F5F1E8}
+</style>
+{% schema %}
+{ "name": "AM2 Email", "tag": "section", "settings": [], "presets": [{ "name": "AM2 Email" }] }
+{% endschema %}

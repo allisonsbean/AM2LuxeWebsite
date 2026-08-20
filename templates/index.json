@@ -12,6 +12,22 @@
       "type": "am2luxe-two-ways",
       "settings": {}
     },
+    "am2luxe_bundles": {
+      "type": "am2luxe-bundles",
+      "settings": {}
+    },
+    "am2luxe_story": {
+      "type": "am2luxe-story",
+      "settings": {}
+    },
+    "am2luxe_reviews": {
+      "type": "am2luxe-reviews",
+      "settings": {}
+    },
+    "am2luxe_email": {
+      "type": "am2luxe-email",
+      "settings": {}
+    },
     "product_list_fa6P9H": {
       "type": "product-list",
       "blocks": {
@@ -608,7 +624,11 @@
     "am2luxe_trust",
     "product_list_fa6P9H",
     "am2luxe_two_ways",
+    "am2luxe_bundles",
     "product_list_YUg6pM",
+    "am2luxe_story",
+    "am2luxe_reviews",
+    "am2luxe_email",
     "collection_list_FDL9Bz"
   ]
 }
