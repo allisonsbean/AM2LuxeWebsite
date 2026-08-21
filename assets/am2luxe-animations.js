@@ -243,6 +243,7 @@
      Inject a luxury scrolling text divider between sections
   ───────────────────────────────────────────────────────── */
   function injectMarqueeDivider() {
+    return; // brand-text marquee removed per request
     // Only inject once, after the first major section
     const main = document.querySelector('main, #MainContent');
     if (!main || document.querySelector('.am2-marquee-divider')) return;
