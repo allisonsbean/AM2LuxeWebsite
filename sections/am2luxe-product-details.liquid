@@ -1,0 +1,44 @@
+<div class="am2pd">
+  <div class="am2pd__wrap">
+    <div class="am2pd__head">
+      <span class="am2pd__rule"></span>
+      <span class="am2pd__eyebrow">In every AM2Luxe set</span>
+      <h2 class="am2pd__title">Salon-worthy, made to last</h2>
+    </div>
+    <div class="am2pd__grid">
+      <div class="am2pd__item"><h3>32 nails, 16 sizes</h3><p>A true fit for every finger, so nothing looks bulky or falls short.</p></div>
+      <div class="am2pd__item"><h3>Two ways to wear</h3><p>Glue for up to two weeks, or sticky tabs for a few days and easy reuse.</p></div>
+      <div class="am2pd__item"><h3>A cleaner formula</h3><p>HEMA, TPO, and DI-HUMA free, so you get the look without the harsh stuff.</p></div>
+      <div class="am2pd__item"><h3>Wear again and again</h3><p>Remove gently, save your set, and reach for it another day.</p></div>
+    </div>
+    <p class="am2pd__included"><span>Everything's in the box:</span> nail glue, adhesive tabs, a file, a prep pad, and step-by-step instructions.</p>
+    <div class="am2pd__how">
+      <div class="am2pd__step"><span class="am2pd__n">I</span> Size</div>
+      <div class="am2pd__step"><span class="am2pd__n">II</span> Prep</div>
+      <div class="am2pd__step"><span class="am2pd__n">III</span> Apply</div>
+      <div class="am2pd__step"><span class="am2pd__n">IV</span> Reuse</div>
+    </div>
+  </div>
+</div>
+<style>
+  .am2pd{--gold:linear-gradient(135deg,#4E3A1A,#7C5F2A,#5E4620,#8A6D2F,#4E3A1A);background:#F5F1E8;border-top:1px solid rgba(168,135,74,.3)}
+  .am2pd__wrap{max-width:1100px;margin:0 auto;padding:80px 34px}
+  .am2pd__head{text-align:center;margin-bottom:46px}
+  .am2pd__rule{display:block;width:52px;height:2px;background:var(--gold);margin:0 auto 18px}
+  .am2pd__eyebrow{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;background:var(--gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .am2pd__title{font-family:'Bodoni Moda',serif;font-weight:500;font-size:40px;color:#161311;margin:12px 0 0}
+  .am2pd__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .am2pd__item{text-align:center;padding:0 8px}
+  .am2pd__item h3{font-family:'Bodoni Moda',serif;font-weight:500;font-size:21px;color:#161311;margin:0 0 8px}
+  .am2pd__item p{font-family:'Jost',sans-serif;font-weight:300;font-size:14px;line-height:1.7;color:#5B5349;margin:0}
+  .am2pd__included{text-align:center;font-family:'Jost',sans-serif;font-weight:300;font-size:15px;color:#5B5349;margin:44px auto 0;max-width:640px;padding-top:32px;border-top:1px solid rgba(22,19,17,.1)}
+  .am2pd__included span{font-family:'Bodoni Moda',serif;font-style:italic;color:#161311}
+  .am2pd__how{display:flex;justify-content:center;gap:40px;margin-top:34px;flex-wrap:wrap}
+  .am2pd__step{font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#161311;display:flex;align-items:center;gap:10px}
+  .am2pd__n{font-family:'Bodoni Moda',serif;font-size:22px;background:var(--gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  @media(max-width:820px){.am2pd__grid{grid-template-columns:1fr 1fr;gap:32px 24px}.am2pd__title{font-size:32px}.am2pd__how{gap:26px}}
+  @media(max-width:480px){.am2pd__grid{grid-template-columns:1fr}}
+</style>
+{% schema %}
+{ "name": "AM2 Product Details", "tag": "section", "settings": [], "presets": [{ "name": "AM2 Product Details" }] }
+{% endschema %}
