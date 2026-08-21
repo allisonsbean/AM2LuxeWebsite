@@ -8,8 +8,16 @@
       "type": "am2luxe-trust",
       "settings": {}
     },
+    "am2luxe_lifestyle": {
+      "type": "am2luxe-lifestyle",
+      "settings": {}
+    },
     "am2luxe_two_ways": {
       "type": "am2luxe-two-ways",
+      "settings": {}
+    },
+    "am2luxe_how": {
+      "type": "am2luxe-how",
       "settings": {}
     },
     "am2luxe_bundles": {
@@ -627,7 +635,9 @@
     "am2luxe_hero",
     "am2luxe_trust",
     "product_list_fa6P9H",
+    "am2luxe_lifestyle",
     "am2luxe_two_ways",
+    "am2luxe_how",
     "am2luxe_bundles",
     "am2luxe_marquee",
     "product_list_YUg6pM",

@@ -1,0 +1,40 @@
+<div class="am2l">
+  <div class="am2l__wrap">
+    <div class="am2l__head">
+      <span class="am2l__rule"></span>
+      <span class="am2l__eyebrow">Find your fit</span>
+      <h2 class="am2l__title">Made for your everyday</h2>
+      <p class="am2l__sub">However your week looks, there's a set that keeps up.</p>
+    </div>
+    <div class="am2l__grid">
+      <a href="/collections/all" class="am2l__tile"><span class="am2l__name">Everyday</span><span class="am2l__desc">Polished, effortless, on repeat</span><span class="am2l__arrow">&rarr;</span></a>
+      <a href="/collections/all" class="am2l__tile"><span class="am2l__name">Work</span><span class="am2l__desc">Put-together in ten minutes</span><span class="am2l__arrow">&rarr;</span></a>
+      <a href="/collections/all" class="am2l__tile"><span class="am2l__name">School</span><span class="am2l__desc">Cute, quick, classroom-ready</span><span class="am2l__arrow">&rarr;</span></a>
+      <a href="/collections/all" class="am2l__tile"><span class="am2l__name">Game Day</span><span class="am2l__desc">Off for the match, back on after</span><span class="am2l__arrow">&rarr;</span></a>
+      <a href="/collections/all" class="am2l__tile"><span class="am2l__name">Events</span><span class="am2l__desc">The easiest way to finish the look</span><span class="am2l__arrow">&rarr;</span></a>
+      <a href="/collections/all" class="am2l__tile"><span class="am2l__name">Mother &amp; Daughter</span><span class="am2l__desc">Matching moments, your picks</span><span class="am2l__arrow">&rarr;</span></a>
+    </div>
+  </div>
+</div>
+<style>
+  .am2l{--foil:linear-gradient(135deg,#8A6D2F,#D9BC75,#F4E7B8,#B8923F,#F0DB96,#9C7B3B,#D4B76A);background:#FBF9F4}
+  .am2l__wrap{max-width:1180px;margin:0 auto;padding:92px 34px}
+  .am2l__head{text-align:center;max-width:620px;margin:0 auto 46px}
+  .am2l__rule{display:block;width:52px;height:2px;background:var(--foil);margin:0 auto 20px}
+  .am2l__eyebrow{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.34em;text-transform:uppercase;background:var(--foil);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .am2l__title{font-family:'Bodoni Moda',serif;font-weight:500;font-size:46px;color:#161311;margin:14px 0 12px}
+  .am2l__sub{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;color:#5B5349}
+  .am2l__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .am2l__tile{position:relative;display:flex;flex-direction:column;justify-content:center;min-height:150px;padding:32px 30px;background:#F5F1E8;border:1px solid rgba(168,135,74,.4);text-decoration:none;transition:all .3s ease;overflow:hidden}
+  .am2l__tile:hover{background:#161311;border-color:#161311}
+  .am2l__name{font-family:'Bodoni Moda',serif;font-weight:500;font-size:27px;color:#161311;transition:color .3s ease}
+  .am2l__desc{font-family:'Jost',sans-serif;font-weight:300;font-size:13px;letter-spacing:.02em;color:#5B5349;margin-top:6px;transition:color .3s ease}
+  .am2l__arrow{position:absolute;top:26px;right:28px;font-size:18px;background:var(--foil);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;transition:transform .3s ease}
+  .am2l__tile:hover .am2l__name,.am2l__tile:hover .am2l__desc{color:#F5F1E8}
+  .am2l__tile:hover .am2l__arrow{transform:translateX(6px)}
+  @media(max-width:820px){.am2l__grid{grid-template-columns:1fr 1fr}.am2l__title{font-size:36px}}
+  @media(max-width:520px){.am2l__grid{grid-template-columns:1fr}}
+</style>
+{% schema %}
+{ "name": "AM2 Shop by Lifestyle", "tag": "section", "settings": [], "presets": [{ "name": "AM2 Shop by Lifestyle" }] }
+{% endschema %}

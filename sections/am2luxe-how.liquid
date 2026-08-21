@@ -1,0 +1,35 @@
+<div class="am2hw">
+  <div class="am2hw__wrap">
+    <div class="am2hw__head">
+      <span class="am2hw__rule"></span>
+      <span class="am2hw__eyebrow">Simpler than it sounds</span>
+      <h2 class="am2hw__title">How it works</h2>
+      <p class="am2hw__sub">A salon-quality manicure in about ten minutes, start to finish.</p>
+    </div>
+    <div class="am2hw__grid">
+      <div class="am2hw__step"><div class="am2hw__n">I</div><h3>Size</h3><p>Match each nail to your fit using the sizing guide tucked into every set.</p></div>
+      <div class="am2hw__step"><div class="am2hw__n">II</div><h3>Prep</h3><p>Buff, clean, and dry your natural nails so everything holds beautifully.</p></div>
+      <div class="am2hw__step"><div class="am2hw__n">III</div><h3>Apply</h3><p>Sticky tabs for a few days of wear, or glue for up to two weeks.</p></div>
+      <div class="am2hw__step"><div class="am2hw__n">IV</div><h3>Reuse</h3><p>Remove gently, save your set, and wear it again another day.</p></div>
+    </div>
+  </div>
+</div>
+<style>
+  .am2hw{--foil:linear-gradient(135deg,#8A6D2F,#D9BC75,#F4E7B8,#B8923F,#F0DB96,#9C7B3B,#D4B76A);background:#F5F1E8}
+  .am2hw__wrap{max-width:1160px;margin:0 auto;padding:92px 34px}
+  .am2hw__head{text-align:center;max-width:640px;margin:0 auto 54px}
+  .am2hw__rule{display:block;width:52px;height:2px;background:var(--foil);margin:0 auto 20px}
+  .am2hw__eyebrow{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.34em;text-transform:uppercase;background:var(--foil);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .am2hw__title{font-family:'Bodoni Moda',serif;font-weight:500;font-size:46px;color:#161311;margin:14px 0 12px}
+  .am2hw__sub{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;color:#5B5349}
+  .am2hw__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .am2hw__step{text-align:center;padding:0 12px}
+  .am2hw__n{font-family:'Bodoni Moda',serif;font-size:40px;line-height:1;background:var(--foil);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:16px}
+  .am2hw__step h3{font-family:'Bodoni Moda',serif;font-weight:500;font-size:24px;color:#161311;margin:0 0 8px}
+  .am2hw__step p{font-family:'Jost',sans-serif;font-weight:300;font-size:14px;line-height:1.7;color:#5B5349;margin:0}
+  @media(max-width:820px){.am2hw__grid{grid-template-columns:1fr 1fr;gap:36px 24px}.am2hw__title{font-size:36px}}
+  @media(max-width:480px){.am2hw__grid{grid-template-columns:1fr}}
+</style>
+{% schema %}
+{ "name": "AM2 How It Works", "tag": "section", "settings": [], "presets": [{ "name": "AM2 How It Works" }] }
+{% endschema %}
