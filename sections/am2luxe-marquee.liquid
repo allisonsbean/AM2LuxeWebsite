@@ -1,0 +1,24 @@
+<div class="am2m">
+  <div class="am2m__track">
+    <div class="am2m__item"><img src="https://am2luxe.com/cdn/shop/files/Pink_Diamond_Dust_3.jpg?v=1754693163&width=600" alt="AM2Luxe"></div>
+    <div class="am2m__item"><img src="https://am2luxe.com/cdn/shop/files/IMG_8695.jpg?v=1754705828&width=600" alt="AM2Luxe"></div>
+    <div class="am2m__item"><img src="https://am2luxe.com/cdn/shop/files/IMG_8700.jpg?v=1764465703&width=600" alt="AM2Luxe"></div>
+    <div class="am2m__item"><img src="https://am2luxe.com/cdn/shop/files/IMG_8680.jpg?v=1754702035&width=600" alt="AM2Luxe"></div>
+    <div class="am2m__item"><img src="https://am2luxe.com/cdn/shop/files/Pink_Diamond_Dust_3.jpg?v=1754693163&width=600" alt="AM2Luxe"></div>
+    <div class="am2m__item"><img src="https://am2luxe.com/cdn/shop/files/IMG_8695.jpg?v=1754705828&width=600" alt="AM2Luxe"></div>
+    <div class="am2m__item"><img src="https://am2luxe.com/cdn/shop/files/IMG_8700.jpg?v=1764465703&width=600" alt="AM2Luxe"></div>
+    <div class="am2m__item"><img src="https://am2luxe.com/cdn/shop/files/IMG_8680.jpg?v=1754702035&width=600" alt="AM2Luxe"></div>
+  </div>
+</div>
+<style>
+  .am2m{--foil:linear-gradient(135deg,#8A6D2F,#D9BC75,#F4E7B8,#B8923F,#F0DB96,#9C7B3B,#D4B76A);background:#161311;overflow:hidden;padding:50px 0}
+  .am2m__track{display:flex;gap:22px;width:max-content;animation:am2mscroll 38s linear infinite}
+  .am2m:hover .am2m__track{animation-play-state:paused}
+  .am2m__item{flex:0 0 auto;width:270px;height:338px;background:var(--foil);padding:2px}
+  .am2m__item img{width:100%;height:100%;object-fit:cover;display:block}
+  @keyframes am2mscroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 11px))}}
+  @media(max-width:700px){.am2m__item{width:200px;height:250px}}
+</style>
+{% schema %}
+{ "name": "AM2 Marquee", "tag": "section", "settings": [], "presets": [{ "name": "AM2 Marquee" }] }
+{% endschema %}

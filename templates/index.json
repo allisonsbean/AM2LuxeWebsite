@@ -16,6 +16,10 @@
       "type": "am2luxe-bundles",
       "settings": {}
     },
+    "am2luxe_marquee": {
+      "type": "am2luxe-marquee",
+      "settings": {}
+    },
     "am2luxe_story": {
       "type": "am2luxe-story",
       "settings": {}
@@ -625,6 +629,7 @@
     "product_list_fa6P9H",
     "am2luxe_two_ways",
     "am2luxe_bundles",
+    "am2luxe_marquee",
     "product_list_YUg6pM",
     "am2luxe_story",
     "am2luxe_reviews",
