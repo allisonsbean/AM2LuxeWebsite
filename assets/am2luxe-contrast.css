@@ -1,0 +1,12 @@
+/* ============================================================
+   AM2LUXE — legible gold on light backgrounds
+   The bright foil shimmer reads beautifully on the black sections,
+   but it's too light to read on ivory. On the light-background
+   sections we override the gold to a deeper, readable tone.
+   ============================================================ */
+.am2hw,   /* how it works */
+.am2b,    /* bundles */
+.am2s,    /* story */
+.am2r {   /* reviews */
+  --foil: linear-gradient(135deg,#4E3A1A 0%,#7C5F2A 34%,#5E4620 64%,#8A6D2F 88%,#4E3A1A 100%) !important;
+}
