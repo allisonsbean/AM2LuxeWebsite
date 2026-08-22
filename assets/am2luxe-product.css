@@ -1,0 +1,24 @@
+/* ============================================================
+   AM2LUXE — readable product descriptions
+   The pasted description HTML squishes bullet lists into narrow
+   side-by-side columns. Force them back to normal stacked lists.
+   ============================================================ */
+.rte ul,
+.rte ol {
+  display: block !important;
+  columns: 1 !important;
+  column-count: 1 !important;
+  -webkit-columns: 1 !important;
+  gap: 0 !important;
+  padding-left: 1.4em !important;
+  margin: 0 0 1.1em !important;
+}
+.rte ul { list-style: disc !important; }
+.rte ol { list-style: decimal !important; }
+.rte li {
+  display: list-item !important;
+  width: auto !important;
+  float: none !important;
+  margin: 0 0 0.4em !important;
+  line-height: 1.6 !important;
+}
